@@ -1,0 +1,70 @@
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;  /* Ensure the background covers the full width */
+    width: 100vw;  /* Full viewport width */
+    height: 100vh;  /* Full viewport height */
+    background-image: url("../images/HomeWallpaper.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.1;
+    margin: auto;
+}
+
+.titlePage {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    z-index: 0;
+    padding: 15px;
+
+}
+
+.mainBtn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 20px 20px;
+    background-color: #241e1c;
+    color: #e0e0e0;
+    text-decoration: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.mainBtn:hover{
+    color: #af3333; 
+}
+
+.mainButton:hover {
+transform: scale(0.95);
+transition: 0.3s;  
+}
+
+
+.titlePage-text {
+    z-index: 0;
+    display: inline-block;
+    padding: 0px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.titlePage h1 {
+    font-size: 48px;
+    color: rgba(255, 255, 255);
+}
+
+.titlePage p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .titlePage h1 {
+        font-size: 24px;
+        color: rgba(255, 255, 255);
+    }
+  }

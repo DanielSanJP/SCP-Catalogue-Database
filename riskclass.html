@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Foundation Catalog</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/page.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+
+    <div class="main">
+<div class="headingCard">
+        <h1>Risk Classes</h1>
+        <p>Risk Class refers to the severity of an anomaly's effects on an individual person and how easily one can
+            recover from it. This is the "Protect" part of "Secure, Contain, Protect.</p>
+        </div>
+
+        <div class="card">
+        <div class="title"><img src="./images/Notice.png" alt="">
+            <h3>Notice</h3>
+        </div>
+        <p>The anomalous effects of the object are nearly non-existent to mild.
+            An individual within close proximity of the object would not feel anything as a result of the object.
+            It poses no danger to any individual nearby.</p>
+        </div>
+
+        <div class="card">
+        <div class="title"><img src="./images/Caution.png" alt="">
+            <h3>Caution</h3>
+        </div>
+        <p>The anomalous effects of the object are mild to moderate.
+            An individual within close proximity of the object may feel mild effects from the anomalous object.
+            It poses mild danger to any individual nearby.</p>
+        </div>
+
+        <div class="card">
+        <div class="title"><img src="./images/Warning.png" alt="">
+            <h3>Warning</h3>
+        </div>
+        <p>The anomalous effect of the object are moderate to significant.
+            An individual within close proximity of the object will feel mild effects or may feel major effects from the
+            anomalous object.
+            It poses moderate danger to any individual nearby.</p>
+            </div>  
+
+            <div class="card">
+        <div class="title"><img src="./images/Danger.png" alt="">
+            <h3>Danger</h3>
+        </div>
+        <p>The anomalous effect of the object are significant to extreme.
+            An individual within close proximity of the object will feel major effects or may feel extreme effects from
+            the anomalous object.
+            It poses significant danger to any individual nearby.</p>
+            </div>  
+
+            <div class="card">
+        <div class="title"><img src="./images/Critical.png" alt="">
+            <h3>Critical</h3>
+        </div>
+        <p>This Risk Class should only be chosen when the object's effects will be near instant and/or extremely severe.
+            It does not, necessarily, need to cause actual death, but death is incredibly likely and expected. Any
+            individual nearby will feel the effects near instantly and the possibility of recovery is impossible.</p>
+            </div>  
+    </div>
+
+    <script type="module">
+        import { headerTemplate } from './scripts/header.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('header').innerHTML = headerTemplate;
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        });
+    </script>
+    
+    <script type="module">
+        import { footerTemplate } from './scripts/footer.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('footer').innerHTML = footerTemplate;
+        });
+    </script>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Foundation Catalog</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/page.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+
+    <div class="main">
+        <div class="headingCard">
+            <h1>Terms and Conditions</h1>
+            <p></p>
+        </div>
+
+        <div class="card">
+            <div class="title">
+                <h3></h3>
+            </div>
+            <p>Welcome to <b>SCP Foundation Catalogue</b>. By accessing and using this website, you agree to the
+                following terms and conditions. All content on this site, including but not limited to SCP articles,
+                images, and related media, is for informational and entertainment purposes only. The SCP Foundation and
+                related content are part of a fictional universe and are not to be taken as real.You may not use any
+                content from this site for commercial purposes without explicit permission from the content creators.
+                While you are free to share and discuss the content, you must credit the original creators and provide a
+                link back to this site. We do not take responsibility for the accuracy, completeness, or reliability of
+                the content, and use of the site is at your own risk.We reserve the right to modify these terms at any
+                time, so please review them periodically. Your continued use of the site constitutes acceptance of any
+                changes to the terms.If you do not agree with these terms, please discontinue use of this website
+                immediately.</p>
+        </div>
+
+
+
+    </div>
+
+    <script type="module">
+        import { headerTemplate } from './scripts/header.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('header').innerHTML = headerTemplate;
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        });
+    </script>
+
+    <script type="module">
+        import { footerTemplate } from './scripts/footer.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('footer').innerHTML = footerTemplate;
+        });
+    </script>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>

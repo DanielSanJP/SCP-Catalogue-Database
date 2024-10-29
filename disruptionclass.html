@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Foundation Catalog</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/page.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+
+    <div class="main">
+<div class="headingCard">
+        <h1>Discruption Classes</h1>
+        <p>Disruption Class refers to an anomaly's ability to disturb the status quo and/or break the veil. This is the
+            "Secure" part of "Secure, Contain, Protect.</p>
+        </div>
+
+        <div class="card">
+            <div class="title"><img src="./images/Dark.png" alt="">
+                <h3>Dark</h3>
+            </div>
+            <p>The known or potential disruption is so low as to not be a concern.
+                The object is essentially inert when not interacted with and may potentially only affect a single
+                individual.
+                The Foundation would find it trivial to clean up after it.</p>
+        </div>
+
+        <div class="card">
+            <div class="title"><img src="./images/Vlam.png" alt="">
+                <h3>Vlam</h3>
+            </div>
+            <p>The known or potential disruption would be localized to a small handful of people.
+
+                The anomalous effects certainly do affect multiple people, but it would not extend very far.
+
+                The Foundation would find it relatively simple to neutralize its effects.</p>
+        </div>
+
+        <div class="card">
+            <div class="title"><img src="./images/Keneq.png" alt="">
+                <h3>Keneq</h3></div>
+            <p>The known or potential disruption would be extended to a number of people roughly defined as a city.
+                The anomalous effects could spread with fairly significant speed, fast enough as to cause concern.
+                The Foundation would find it moderately difficult to neutralize its effects.</p>
+        </div>
+
+        <div class="card">
+            <div class="title"><img src="./images/Ekhi.png" alt="">
+                <h3>Ekhi</h3>
+            </div>
+            <p>The known disruption would extend to roughly the size of a large metropolitan area to an entire country.
+                The potential disruption could extend to the entire known world.
+                The spread would be swift and difficult to manage.
+                The Foundation would find it quite difficult to neutralize its effects.</p>
+        </div>
+
+        <div class="card">
+            <div class="title"><img src="./images/Amida.png" alt="">
+                <h3>Amida</h3>
+            </div>
+            <p>This Disruption Class should be reserved for special circumstances when The Foundation is essentially
+                "declaring war" on an anomaly. When an anomaly poses such a dire threat to the status quo and The
+                Foundation's veil that there is no other option than to use all possible options in order to Neutralize
+                it.
+                The effects of an Amida anomaly would extend to the entire known world and possibly the entire universe.
+            </p>
+        </div>
+    </div>
+
+    <script type="module">
+        import { headerTemplate } from './scripts/header.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('header').innerHTML = headerTemplate;
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        });
+    </script>
+
+<script type="module">
+    import { footerTemplate } from './scripts/footer.js';
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('footer').innerHTML = footerTemplate;
+    });
+</script>
+
+<div id="footer"></div>
+
+</body>
+
+</html>
