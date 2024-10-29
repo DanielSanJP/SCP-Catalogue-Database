@@ -74,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <div id="header"></div>
+
     <div class="form-box">
         <h1>Create New SCP Entry</h1>
     </div>
@@ -152,7 +153,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </form>
 
+    <!-- FOOTER LOCATION -->
     <div id="footer"></div>
+
+    <script type="module">
+        import { headerTemplate } from './scripts/header.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('header').innerHTML = headerTemplate;
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        });
+    </script>
+
+    <script type="module">
+        import { footerTemplate } from './scripts/footer.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('footer').innerHTML = footerTemplate;
+        });
+    </script>
 </body>
 
 </html>
