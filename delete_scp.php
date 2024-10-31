@@ -20,7 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Execute the query and handle redirection
     if ($stmt->execute()) {
-        header("Location: catalogue.php?message=deleted");
+        echo "<script>
+        alert('SCP entry deleted successfully!');
+        window.location.href = 'catalogue.php';
+      </script>";
         exit();
     } else {
         echo "Error deleting SCP: " . $conn->error;

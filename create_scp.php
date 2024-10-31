@@ -48,8 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Execute and handle errors
     if ($stmt->execute()) {
-        echo "SCP entry created successfully!<br>";
-        header("Location: catalogue.php?message=created");
+        echo "<script>
+        alert('SCP entry created successfully!');
+        window.location.href = 'catalogue.php';
+      </script>";
         exit();
     } else {
         echo "Error executing statement: " . $stmt->error;

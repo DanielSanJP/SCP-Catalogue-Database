@@ -15,7 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($result->num_rows === 1) {
         $_SESSION['admin_logged_in'] = true; // Set session variable
-        header("Location: catalogue.php"); // Redirect to catalogue
+        echo "<script>
+        alert('Admin successfully logged in!');
+        window.location.href = 'index.php';
+      </script>";
         exit();
     } else {
         echo "<p>Invalid login credentials.</p>";

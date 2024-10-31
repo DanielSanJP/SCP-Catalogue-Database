@@ -21,7 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if ($stmt->execute()) {
-        header("Location: catalogue.php?message=updated");
+        echo "<script>
+        alert('SCP changes successfully saved!');
+        window.location.href = 'catalogue.php';
+      </script>";
         exit();
     } else {
         echo "Error: " . $stmt->error;
